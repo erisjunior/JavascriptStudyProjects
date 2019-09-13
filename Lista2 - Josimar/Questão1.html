@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questão 1</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            //<18,5 abaixo do peso
+            //18,5 e 25 peso normal
+            //25 e 30 acima do peso
+            //acima de 30 obeso
+            imcc = "";
+            nome = prompt("Informe seu nome: ");
+            peso = prompt("Informe seu peso: ");
+            altura = prompt("Informe sua altura: ");
+            
+            imc = (peso/(altura*altura));
+            
+            if(imc<18.5){
+                imcc = "Abaixo do peso";
+            }else if(imc >= 18.5 && imc < 25){
+                imcc = "Peso Normal";
+            }
+            else if(imc >= 25 && imc <= 30){
+                imcc = "Acima do Peso";
+            }else{
+                imcc = "Obeso!!";
+            }
+            
+            alert(nome+" seu IMC é: "+imc.toFixed(2)+" Estado: "+imcc);
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

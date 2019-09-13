@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CaixaX</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <center>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="add('Arrox')"> Arrox</a></li>
+            <li><a href="javascript:void(0)" onclick="add('Feixjao')"> Feixjão</a></li>
+            <li><a href="javascript:void(0)" onclick="add('Cuxcux')"> Cuxcux</a></li>
+            <li><a href="javascript:void(0)" onclick="add('Bixcoito')"> Bixcoito</a></li>
+            <li><a href="javascript:void(0)" onclick="add('Axucar')"> Axucar</a></li>
+        </ul>
+
+        <table>
+            <tr class="table">
+                <td>Nome</td>
+                <td>Preço</td>
+                <td>Quantidade</td>
+                <td>Remover</td>
+            </tr>
+            
+            <tr id="Arrox">
+                <td>Arrox</td>
+                <td class="prec">3.20</td>
+                <td class="preco">0</td>
+                <td class="menos preco"><a href="javascript:void(0)" onclick="menos('Arrox')"> - </a></td>
+            </tr>
+
+            <tr id="Feixjao">
+                <td>Feixjão</td>
+                <td class="prec">7.70</td>
+                <td class="preco">0</td>
+                <td class="menos preco"><a href="javascript:void(0)" onclick="menos('Feixjao')"> - </a></td>
+            </tr>
+
+            <tr id="Cuxcux">
+                <td>Cuxcux</td>
+                <td class="prec">1.40</td>
+                <td class="preco">0</td>
+                <td class="menos preco"><a href="javascript:void(0)" onclick="menos('Cuxcux')"> - </a></td>
+            </tr>
+
+            <tr id="Bixcoito">
+                <td>Bixcoito</td>
+                <td class="prec">2.00</td>
+                <td class="preco">0</td>
+                <td class="menos preco"><a href="javascript:void(0)" onclick="menos('Bixcoito')"> - </a></td>
+            </tr>
+
+            <tr id="Axucar">
+                <td>Axucar</td>
+                <td class="prec">1.90</td>
+                <td class="preco">0</td>
+                <td class="menos preco"><a href="javascript:void(0)" onclick="menos('Axucar')"> - </a></td>
+            </tr>
+
+            <tr class="table">
+                <td>Total: </td>
+                <td colspan="3" class="preco" id="total">R$ 0.00</td>
+            </tr>
+        </table>
+    
+    </center>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

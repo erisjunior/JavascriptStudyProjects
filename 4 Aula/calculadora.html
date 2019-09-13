@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function reset(){
+                var v1 = calc.visor.value = '';
+            }
+            var v1 = 0;
+            var v2 = 0;
+                function btn(opc){
+                    
+                   if(opc == 'soma'){
+                       var v1 = calc.visor.value;
+                      calc.visor.value = '';
+                      operador = '+';
+                   }else if(opc == 'sub'){
+                       var v1 = calc.visor.value;
+                      calc.visor.value = '';
+                       operador = '-';
+                   }else if(opc == 'mult'){
+                       var v1 = calc.visor.value;
+                      calc.visor.value = '';
+                       operador = '*';
+                   }else if(opc == 'div'){
+                       var v1 = calc.visor.value;
+                      calc.visor.value = '';
+                       operador = '/';
+                   }
+                   
+                }
+            function igual(){
+                var v2 = calc.visor.value;
+                if(operador == '+'){
+                    var soma = parseInt(v1) + parseInt(v2);
+                }
+            }
+           
+        </script>
+        <style>
+            fieldset{width: 180px;}
+            #visor{width: 170px;}
+            #igual{width: 170px; height: 40px; font: 18px "Arial"; font-weight: bold; background: #ccc;}
+            input{width: 40px; height: 40px; font: 16 "Arial"; font-weight: bold;}
+        </style>
+    </head>
+    <body onload="btn()">
+        <form name="calc">
+            <fieldset>
+                <input type="text" id="visor" name="visor" maxlength="16" disabled >
+                <p>
+                <input type="button" value="=" name="igual" onclick="igual()">
+                <p>
+                <input type="button" value="9" name="nove" onclick="calc.visor.value += '9'">
+                <input type="button" value="8" name="oito" onclick="calc.visor.value += '8'">
+                <input type="button" value="7" name="sete" onclick="calc.visor.value += '7'">
+                <input type="button" value="+" name="soma" onclick="btn('soma')">
+                <p>
+                <input type="button" value="4" name="4" onclick="calc.visor.value += '6'">
+                <input type="button" value="5" name="5" onclick="calc.visor.value += '5'">
+                <input type="button" value="6" name="6" onclick="calc.visor.value += '4'">
+                <input type="button" value="-" name="sub" onclick="btn('sub')">
+                <p>
+                <input type="button" value="3" name="3" onclick="calc.visor.value += '3'">
+                <input type="button" value="2" name="2" onclick="calc.visor.value += '2'">
+                <input type="button" value="1" name="1" onclick="calc.visor.value += '1'">
+                <input type="button" value="*" name="mult" onclick="btn('mult')">
+                <p>
+                <input type="button" value="." name="ponto" onclick="calc.visor.value += '.'">
+                <input type="button" value="0" name="zero" onclick="calc.visor.value += '0'">
+                <input type="button" id="reset" name="reset" onclick="calc.visor.value = ''" value="CE">
+                <input type="button" value="/" name="div" onclick="btn('div')">
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lightbox</title>
+	<meta charset="utf-8">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+
+	<style>
+		*{
+			margin: 0 auto; padding: 0
+		}
+		input{display:block;}
+
+	</style>
+
+	<script type="text/javascript">
+
+		jQuery(function($){
+			$("#cpf").mask("999.999.999-99");
+			$("#CEP").mask("99.999-999", {
+				placeholder: "xx.xxx-xxx"});
+			$("#Celular").mask("(99) 9 9999-9999", {
+				placeholder: "(xx) x xxxx-xxxx"});
+			$("#Telefone").mask("(99) 9999-9999", {
+				placeholder: "(xx) xxxx-xxxx"});
+			$("#Data").mask("99/99/9999", {
+				placeholder: "dd/mm/yyyy"});
+		});
+	</script>
+
+
+</head>
+	<body>
+
+		<form class="" action="index.html" method="post">
+			<label>CPF</label>
+			<input type="text" name="CPF" id="cpf">
+			<label>CEP</label>
+			<input type="text" name="CEP" id="CEP">
+			<label>Celular</label>
+			<input type="text" name="Celular" id="Celular">
+			<label>Telefone</label>
+			<input type="text" name="Telefone" id="Telefone">
+			<label>Data</label>
+			<input type="text" name="Data" id="Data">
+
+
+
+		</form>
+
+</body>
+
+</html>

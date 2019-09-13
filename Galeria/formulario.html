@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+        <script>
+            jQuery(function($){
+                $("#cpf").mask("999.999.999-99"); 
+                $("#cep").mask("99.999-999");
+                $("#celular").mask("(99) 9 9999-9999");
+                $("#data").mask("99/99/9999");
+                $("#valor").mask("9.999,99");
+            })
+        </script>
+        <style>
+            *{margin: 0 auto; padding: 0;}
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Usuário</legend>
+            <label>CPF</label><br>
+            <input type="text" id="cpf" name="cpf"><br>
+            <label>CELULAR</label><br>
+            <input type="text" id="celular" name="celular"><br>
+            <label>CEP</label><br>
+            <input type="text" id="cep" name="cep"><br>
+            <label>DATA</label><br>
+            <input type="text" id="data" name="data"><br>
+            <label>VALOR</label><br>
+            <input type="text" id="valor" name="valor">
+            </fieldset>
+        </form>
+    </body>
+</html>

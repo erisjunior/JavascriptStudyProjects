@@ -1,0 +1,9 @@
+*{margin: 0 auto; padding: 0;}
+
+body{background-color: #eee;}
+
+.contador{ width: 200px; height: 120px; color: #000; font: 100px Arvo; text-align: center; border: 1px solid #bbb; font-weight: bold; background: #ccc; padding: 10px; box-shadow: 2px 2px 5px black}
+
+#contador2 {
+    position: relative; top: 10px;
+}

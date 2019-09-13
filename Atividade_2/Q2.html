@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introdução ao JS</title>
+    <meta charset="utf-8">
+    
+    <script type="text/javascript">
+   
+        var a = prompt("Informe a primeira nota");
+        var b = prompt("Informe a segunda nota");
+        
+        b = b.replace(",",".");
+        a = a.replace(",",".");
+        
+        var media = ((a*2)+(b*3))/5;
+        
+        if(media>=6){
+            alert("Media: "+media+" - Aprovado");
+        }else if(media<6){
+            alert("Media: "+media+" - Reprovado")
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+
+</body>
+    
+</html>

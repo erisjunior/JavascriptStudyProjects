@@ -1,0 +1,26 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+#geral{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+#container{
+    width: 95%;
+    height: 50px;
+    background-color:  seagreen;
+    border-radius: 15px;   
+}
+#adrian, label{
+    font: 16px "Arial";
+    margin-top: -30px;
+}
+#header{
+    float: right;
+    display: inline;
+}
+#ques{
+    display: block;
+}

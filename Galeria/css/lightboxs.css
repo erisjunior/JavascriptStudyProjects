@@ -1,0 +1,93 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    background: #2f2f4f;
+}
+.header{
+    background: #069;
+    width: 750px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 25px;
+}
+.titulo{
+    width: 80%;
+    height: 35px;
+    background: black;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;   
+}
+h3{
+    font: 20px "Arial";
+    color: white;
+    position: relative;
+    top: 5px;
+    text-align: center;
+}
+.nav{
+    width: 700px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 45px;
+    left: 25px;
+}
+.bloco1{
+    width: 120px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 60px;
+    left: 25px;
+}
+.bloco2{
+    width: 120px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 60px;
+    left: 45px;
+}
+.bloco3{
+    width: 120px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 60px;
+    left: 65px;
+}
+.bloco4{
+    width: 120px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 60px;
+    left: 85px;
+}
+.bloco5{
+    width: 120px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: relative;
+    top: 60px;
+    left: 105px;
+}
+#zoom{
+    height: 300px;
+    width: 500px;
+    position: relative;
+    top: 50px;
+    left: 500px;
+    border-radius: 10px;
+}

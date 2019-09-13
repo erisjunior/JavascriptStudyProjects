@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>JS - Aula 4</title>
+    <meta charset="utf-8">
+    <style>
+    
+        *{
+            margin: 0 auto;
+            padding: 0;
+            float: left
+        }
+        input{
+            display: block;
+            float: left;
+        }
+    
+    </style>
+    
+</head>
+
+<body>
+    <font face="Arial">
+    <form method="post" action="#">
+        <label>Produto</label><br>
+        <input type="text" placeholder="Produto" name="prod" id="produto" required><br>
+        <label>Valor Unitario</label><br>
+        <input type="text" placeholder="Valor Unitário" name="valor" id="preco" required><br>
+        <label>Quantidade</label><br>
+        <input type="number" placeholder="Quantidade" onchange="valorTotal()" name="qnt" id="qnt" required><br>
+        <label>Valor Total</label><br>
+        <div id="vt" style="width:170px; height:17px; border:1px solid #aaa; color:#666">Valor Total</div><br>
+        <!--<input type="text" placeholder="Valor Total" name="vpppp" value="" id="vt" disabled><br>-->
+        <label>Valor Pago</label><br>
+        <input type="text" placeholder="Valor Pago" onchange="Troco()" name="vp" id="vp" required><br>
+        <label>Troco</label><br>
+        <!--<input type="text" placeholder="Troco" name="troco" id="troco" disabled><br>-->
+        <div id="troco"  style="width:170px; height:17px; border:1px solid #aaa; color:#666">Troco</div><br>
+        <input type="submit" value="Efetuar Venda">
+    </form>
+    </font>
+</body>
+</html>
+<script type="text/javascript">
+        function valorTotal(){
+            var vu = document.getElementById("preco").value;
+            var qnt = document.getElementById("qnt").value;
+            
+            var vt = parseFloat(vu)*parseInt(qnt);
+            
+            document.getElementById("vt").innerHTML = vt.toFixed(2);
+        }
+        function Troco(){
+            var vu = document.getElementById("preco").value;
+            var qnt = document.getElementById("qnt").value;
+            
+            var vt = parseFloat(vu)*parseInt(qnt);
+            
+            var vp = document.getElementById("vp").value;
+            
+            var troc = parseFloat(vp) - parseFloat(vt);
+            
+            if(troc<0){
+                document.getElementById("troco").innerHTML = "Valor Insuficiente";
+            }else{
+                document.getElementById("troco").innerHTML = troc.toFixed(2);
+            }
+    
+        }
+    
+</script>

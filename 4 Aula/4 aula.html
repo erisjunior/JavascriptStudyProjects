@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>04 Aula</title>
+        <meta charset="utf-8">
+        
+        <!--<script type="text/javascript">
+            
+        </script>-->
+        <style>
+            *{padding: 0; margin: 0 auto;}
+            label{font: 16px "arial"}
+            
+        </style>
+    </head>
+    
+    <body>
+       <fieldset>
+       <legend>Calcule sua Compra</legend>   
+       <form action="" method="post">
+        <label>Produto:</label>
+       <input type="text" name="produto" id="pd" placeholder="Produto" required><br>
+        <label>Valor Unitário:</label>
+       <input type="text" name="produto" id="uni" placeholder="Valor" required><br>
+        <label>Quantidade:</label>
+       <input type="number" name="produto" id="qnt" placeholder="Quantidade" required onchange="valortotal()"><br>
+        <label>Valor Total:</label>
+       <!--<input type="text" name="produto" id="vt" placeholder="Valor Total" disabled required><br>-->
+           <div onchange="valortotal()" id="vt" style="background=black; width=100px; heigth=20px; color=red;"></div>
+        <label>Valor Pago:</label>
+       <input type="text" name="produto" id="vp" placeholder="Valor Pago" required><br>
+        <label>Troco:</label>
+       <input type="text" name="produto" id="troco" placeholder="Troco" disabled required onchange="troco()"><br>
+        <input type="submit" onclick="valortotal()" value="Efetuar Compra">
+       </form> 
+       </fieldset>
+        
+        <script type="text/javascript">
+            function valortotal(){
+               var und = document.getElementById("und").value;
+               var qnt = document.getElementById("qnt").value;
+               vt = (parseFloat(und) * parseInt(qnt));
+              document.getElementById("vt").innerHTML = vt.toFixed(2);
+            }
+            function troco(){
+               var und = document.getElementById("und").value;
+               var qnt = document.getElementById("qnt").value;
+               vt = (parseFloat(und) * parseInt(qnt));
+            
+               vp = document.getElementById("vp").value;
+               t = vp - vt;
+                if(t < 0){
+                    document.getElementById("troco").innerHTML = "Valor Insuficiente..."
+                }else{
+               document.getElementById("troco").innerHTML = v.toFixed(2);
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

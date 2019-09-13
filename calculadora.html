@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+<script type="text/javascript">
+	
+    var num5 = 0;
+    var num1 = 0;
+    var num2 = 0;
+    var num3 = 0;
+    var num4 = 0;
+    
+    function Reset(){
+        calc.visor.value = "";
+    }
+    
+    function Btn(num){
+        if(num4==0){
+            calc.visor.value +=num;
+        } else if (num4==1){
+            calc.visor.value = "";
+            calc.visor.value +=num;
+            num4=0;
+        }
+    }
+    
+    function Op(op){
+        if(num5 == 0){
+            num1 = calc.visor.value;
+            calc.visor.value = "";
+            num5 = parseInt(op);
+        }else{
+            num2 = calc.visor.value;
+            if(num5==1){
+                num3 = parseFloat(num1) + parseFloat(num2);
+            }else if(num5==2){
+                num3 = parseFloat(num1) - parseFloat(num2);
+            }else if(num5==3){
+                num3 = parseFloat(num1) / parseFloat(num2);
+            }else if(num5==4){
+                num3 = parseFloat(num1) * parseFloat(num2);
+            }
+            calc.visor.value = ""+num3;
+            num4=1;
+            num5=0;
+        }
+    }
+    
+    function Igual(){
+        num2 = calc.visor.value;
+        if(num5==1){
+            num3 = parseFloat(num1) + parseFloat(num2);
+        }else if(num5==2){
+            num3 = parseFloat(num1) - parseFloat(num2);
+        }else if(num5==3){
+            num3 = parseFloat(num1) / parseFloat(num2);
+        }else if(num5==4){
+            num3 = parseFloat(num1) * parseFloat(num2);
+        }
+        calc.visor.value = ""+num3;
+        num4=1;
+        num5=0;
+    }
+        
+</script>
+<style type="text/css">
+	fieldset{
+		width: 172px
+	}
+	#visor{
+		width: 180px; height: 40px; color: #ccc; font: 18px Arial; font-weight: bold;text-align: right;
+	}
+    input{
+        width: 43px; height: 40px; font: 18px Arial; font-weight: bold;
+    }
+    #reset{
+        width: 90px; height: 40px; font: 18px Arial; font-weight: bold; background: #ccc; color: black;
+    }
+</style>
+</head>
+<body>
+<fieldset>
+	<form name="calc">
+		<input type="text" name="visor" maxlength="16" id="visor" value="" readonly>
+			<hr>
+            <input type="button" id="reset" onclick="Reset()" name="" value="CE">
+			<p>
+			<input type="button" name="" value="7" onclick="Btn(7)">
+			<input type="button" name="" value="8" onclick="Btn(8)">
+			<input type="button" name="" value="9" onclick="Btn(9)">
+			<input type="button" name="" value="+" onclick="Op(1)">
+			<p>
+			<input type="button" name="" value="4" onclick="Btn(4)">
+			<input type="button" name="" value="5" onclick="Btn(5)">
+			<input type="button" name="" value="6" onclick="Btn(6)">
+			<input type="button" name="" value="-" onclick="Op(2)">
+			<p>
+			<input type="button" name="" value="1" onclick="Btn(1)">
+			<input type="button" name="" value="2" onclick="Btn(2)">
+			<input type="button" name="" value="3" onclick="Btn(3)">
+			<input type="button" name="" value="/" onclick="Op(3)">
+			<p>
+			<input type="button" name="" value="." onclick="calc.visor.value +='.'">
+			<input type="button" name="" value="0" onclick="Btn(0)">
+			<input type="button" name="" value="=" onclick="Igual()">
+			<input type="button" name="" value="X" onclick="Op(4)">
+			<p>
+            
+	</form>
+</fieldset>
+</body>
+</html>

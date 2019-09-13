@@ -1,0 +1,22 @@
+body{
+  background-color: #bbb;
+  color: black;
+}
+
+*{
+  margin: 0 auto;
+  padding: 0;
+}
+
+h2{
+  background: white;
+  color: #069;
+  padding: 10px;
+  border-bottom: 2px solid red;
+}
+
+p{
+  color: black;
+  background: white;
+  padding: 10px;
+}

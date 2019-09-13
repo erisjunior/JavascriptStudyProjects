@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galeria</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/lightbox.js"></script>
+        <script type="text/javascript" src="js/elevatezoom.js"></script>
+        <link rel="stylesheet" href="css/lightbox.css" type="text/css">
+        <link rel="stylesheet" href="css/lightboxs.css" type="text/css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="titulo"><h3>Galeria</h3></div>
+            <div>
+            <a href="img/(0).jpg" data-lightbox="roadtrip">
+            <img class="nav" src="img/(0).jpg">        
+            </a>
+            </div>
+            <a href="img/(6).png" data-lightbox="roadtrip">
+            <img class="bloco1" src="img/(6).jpg">
+            </a>
+            <a href="img/(2).jpg" data-lightbox="roadtrip">
+            <img class="bloco2" src="img/(2).jpg">
+            </a>
+            <a href="img/(3).jpg" data-lightbox="roadtrip">
+            <img class="bloco3" src="img/(3).jpg">
+            </a>
+            <a href="img/(4).jpg" data-lightbox="roadtrip">
+            <img class="bloco4" src="img/(4).jpg">
+            </a>
+            <a href="img/(5).jpg" data-lightbox="roadtrip">
+            <img class="bloco5" src="img/(5).jpg">
+            </a>
+        </div>
+            <div>
+            <img id="zoom" src="img/(7).jpg" data-zoom-image="img/(7).jpg">
+            </div>
+    </body>
+        <script type="text/javascript">
+            $("#zoom").elevateZoom({
+                zoomType: "lens",
+                lensShape: "round",
+                lensSize: 200
+            });
+        </script>
+</html>

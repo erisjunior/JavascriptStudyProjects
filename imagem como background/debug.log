@@ -1,0 +1,4 @@
+[0522/114008.904:ERROR:process_info.cc(625)] range at 0x6dcc27c400000000, size 0xbe fully unreadable
+[0522/114008.905:ERROR:process_info.cc(625)] range at 0x6dcc282600000000, size 0xbe fully unreadable
+[0522/114008.905:ERROR:process_info.cc(625)] range at 0x0, size 0xbe fully unreadable
+[0522/114009.240:ERROR:http_transport_win.cc(214)] WinHttpSendRequest: O nome ou o endereço do servidor não pôde ser resolvido  (0x2ee7)

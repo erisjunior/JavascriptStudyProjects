@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>JS - Aula 2</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        /*var a = prompt('Informe seu nome');
+        var n = prompt('Quantas vezes seu nome vai acontecer?');
+
+        for(var i = 0; i<n;i++){
+            document.write(a+" - "+(parseInt(i)+1)+"º<br>");
+        }
+
+        var s1 = true;
+        var s2 = false;
+
+        if(s1){
+            document.write('Verdadeiro');
+        } else if(s2){
+            document.write('Falso');
+        } else {
+            document.write('Nada');
+        }*/
+
+
+
+        function dados(){
+            var nome = document.getElementById("nome").value;
+            var ano = document.getElementById("ano").value;
+            var idade = 2017-ano;
+            alert("Nome: "+nome +"\nAno de nascimento: "+ ano+"\nIdade: "+idade);
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="dados()">
+        <label>Nome: </label><br>
+        <input type="text" name="nome" id="nome"><p></p>
+        <label>Ano de nascimento: </label><br>
+        <input type="number" name="ano" id="ano"><p></p>
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introdução ao JS</title>
+    <meta charset="utf-8">
+    
+    <script type="text/javascript">
+   
+        var a = prompt("Informe seu nome");
+        var b = prompt("Informe seu peso");
+        var c = prompt("Informe sua altura");
+        
+        var d = "";
+        
+        b = b.replace(",",".");
+        c = c.replace(",",".");
+        
+        var imc = b/(c*c);
+        
+        if(imc<18.5){
+           d="abaixo do peso";
+        }else if(imc<25){
+            d="com o peso normal";
+        }else if(imc<30){
+            d="acima do peso";
+        }else if(imc>30){
+            d="obeso";
+        }
+        
+        alert(a+" está "+d+" - IMC: "+imc.toFixed(2))
+        
+    </script>
+    
+</head>
+
+<body>
+
+</body>
+    
+</html>
